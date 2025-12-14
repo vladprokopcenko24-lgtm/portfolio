@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфоліо — Головна</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Перейти до вмісту</a>
+
+  <header>
+    <div class="container">
+      <nav class="navbar" aria-label="Головна навігація">
+        <a class="brand" href="index.html">
+          <span class="brand-badge" aria-hidden="true"></span>
+          <span>Моє Портфоліо</span>
+        </a>
+
+        <div class="nav-links" role="navigation">
+          <a href="index.html">Головна</a>
+          <a href="about.html">Про себе</a>
+          <a href="projects.html">Проєкти</a>
+          <a href="contact.html">Контакти</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Перемкнути тему">
+            <span id="themeIcon" aria-hidden="true">☀️</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      
+<section class="hero">
+  <div class="card pad">
+    <span class="kicker"><span class="kdot" aria-hidden="true"></span> Вітаю! Це мій сайт-портфоліо</span>
+    <h1>Я — студент(ка), який(а) вивчає веб-розробку</h1>
+    <p class="lead">
+      Тут зібрані мої навички, приклади робіт та контакти. Сайт створено на HTML5, CSS3 та базовому JavaScript
+      (валидація форми + перемикач теми з LocalStorage).
+    </p>
+
+    <div class="btn-row">
+      <a class="btn primary" href="projects.html">Переглянути проєкти →</a>
+      <a class="btn" href="about.html">Дізнатися більше</a>
+      <a class="btn" href="contact.html">Зв’язатися</a>
+    </div>
+
+    <div class="grid">
+      <div class="card pad col-4">
+        <h2 class="section-title">Навички</h2>
+        <p class="muted">HTML5 • CSS3 • Flexbox/Grid • JS (Basics)</p>
+      </div>
+      <div class="card pad col-4">
+        <h2 class="section-title">Фокус</h2>
+        <p class="muted">Адаптивний дизайн, охайна верстка, доступність</p>
+      </div>
+      <div class="card pad col-4">
+        <h2 class="section-title">Мета</h2>
+        <p class="muted">Зібрати портфоліо для навчання та стажувань</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card avatar" aria-label="Фото або аватар">
+    <img src="img/avatar.svg" alt="Аватар (плейсхолдер)" />
+  </div>
+</section>
+
+<section class="grid" aria-label="Швидкі посилання">
+  <div class="card pad col-6">
+    <h2 class="section-title">Останній проєкт</h2>
+    <p class="muted">
+      Невеликий лендинг для уявної кав’ярні з адаптивною версткою та секцією відгуків.
+    </p>
+    <div class="tags">
+      <span class="tag">HTML</span><span class="tag">CSS Grid</span><span class="tag">Responsive</span>
+    </div>
+    <div style="margin-top:12px">
+      <a class="btn small" href="projects.html#p1">Детальніше</a>
+    </div>
+  </div>
+
+  <div class="card pad col-6">
+    <h2 class="section-title">Що є на сайті</h2>
+    <ul class="muted" style="margin:0; padding-left:18px">
+      <li>Сторінка «Про себе» з таблицею навичок</li>
+      <li>Портфоліо з 5 прикладами проєктів</li>
+      <li>Контакти з формою та мапою (iframe)</li>
+      <li>Темна/світла тема + збереження вибору</li>
+    </ul>
+  </div>
+</section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year">2025</span> • Навчальний проєкт (Лабораторна робота №1)
+    </div>
+  </footer>
+
+  <script>
+    // Set year without extra JS file dependency
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
