@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфоліо | Проєкти</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Перейти до контенту</a>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand__logo" aria-hidden="true">VP</span>
+        <span class="brand__text">
+          <span class="brand__title">Vlad Prokopchenko</span>
+          <span class="brand__subtitle">Portfolio</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Головна навігація">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          ☰ Меню
+        </button>
+
+        <ul class="nav__list" id="navMenu">
+          <li><a class="nav__link" href="index.html">Головна</a></li>
+          <li><a class="nav__link" href="about.html">Про себе</a></li>
+          <li><a class="nav__link is-active" href="projects.html">Проєкти</a></li>
+          <li><a class="nav__link" href="contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn--ghost" type="button" id="themeToggle" aria-label="Перемкнути тему">
+          🌗 Тема
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <h1 class="h1">Портфоліо / Проєкти</h1>
+        <p class="lead">
+          Нижче — 3 приклади. Проєкти рендеряться динамічно з JS.
+        </p>
+
+        <div class="toolbar">
+          <label class="field">
+            <span class="field__label">Пошук</span>
+            <input class="input" type="search" id="projectSearch" placeholder="Напр.: дизайн, магазин, мережа..." />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Фільтр технологій</span>
+            <select class="select" id="techFilter">
+              <option value="all">Усі</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="Network">Network</option>
+            </select>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="projectsGrid" class="projects-grid" aria-live="polite">
+          <noscript>
+            <p>Увімкніть JavaScript, щоб побачити список проєктів.</p>
+          </noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Vlad Prokopchenko. Всі права захищені.</p>
+      <p class="muted">Сторінка: Проєкти</p>
+    </div>
+  </footer>
+</body>
+</html>

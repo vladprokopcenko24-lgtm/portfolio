@@ -1,121 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Портфоліо — Головна</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфоліо | Головна</title>
 
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="assets/script.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
 </head>
+
 <body>
-  <a class="skip-link" href="#content">Перейти до вмісту</a>
+  <a class="skip-link" href="#main">Перейти до контенту</a>
 
-  <header>
-    <div class="container">
-      <nav class="navbar" aria-label="Головна навігація">
-        <a class="brand" href="index.html">
-          <span class="brand-badge" aria-hidden="true"></span>
-          <span>Моє Портфоліо</span>
-        </a>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand__logo" aria-hidden="true">VP</span>
+        <span class="brand__text">
+          <span class="brand__title">Vlad Prokopchenko</span>
+          <span class="brand__subtitle">Portfolio</span>
+        </span>
+      </a>
 
-        <div class="nav-links" role="navigation">
-          <a href="index.html">Головна</a>
-          <a href="about.html">Про себе</a>
-          <a href="projects.html">Проєкти</a>
-          <a href="contact.html">Контакти</a>
-        </div>
+      <nav class="nav" aria-label="Головна навігація">
+        <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+          ☰ Меню
+        </button>
 
-        <div class="nav-actions">
-          <button class="icon-btn" id="themeToggle" type="button" aria-label="Перемкнути тему">
-            <span id="themeIcon" aria-hidden="true">☀️</span>
-          </button>
-        </div>
+        <ul class="nav__list" id="navMenu">
+          <li><a class="nav__link is-active" href="index.html">Головна</a></li>
+          <li><a class="nav__link" href="about.html">Про себе</a></li>
+          <li><a class="nav__link" href="projects.html">Проєкти</a></li>
+          <li><a class="nav__link" href="contact.html">Контакти</a></li>
+        </ul>
       </nav>
+
+      <div class="header-actions">
+        <button class="btn btn--ghost" type="button" id="themeToggle" aria-label="Перемкнути тему">
+          🌗 Тема
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="content">
-    <div class="container">
-      
-<section class="hero">
-  <div class="card pad">
-    <span class="kicker"><span class="kdot" aria-hidden="true"></span> Вітаю! Це мій сайт-портфоліо</span>
-    <h1>Я — студент(ка), який(а) вивчає веб-розробку</h1>
-    <p class="lead">
-      Тут зібрані мої навички, приклади робіт та контакти. Сайт створено на HTML5, CSS3 та базовому JavaScript
-      (валидація форми + перемикач теми з LocalStorage).
-    </p>
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero__content">
+          <h1 class="h1">Привіт! Я Владислав 👋</h1>
+          <p class="lead">
+            Це мій статичний сайт-портфоліо на HTML5 + CSS3 + JavaScript.
+            Тут зібрані навички, приклади робіт та контакти.
+          </p>
 
-    <div class="btn-row">
-      <a class="btn primary" href="projects.html">Переглянути проєкти →</a>
-      <a class="btn" href="about.html">Дізнатися більше</a>
-      <a class="btn" href="contact.html">Зв’язатися</a>
-    </div>
+          <div class="hero__meta">
+            <div class="chip">HTML5</div>
+            <div class="chip">CSS3 (Flex/Grid)</div>
+            <div class="chip">JavaScript</div>
+            <div class="chip">Responsive</div>
+          </div>
 
-    <div class="grid">
-      <div class="card pad col-4">
-        <h2 class="section-title">Навички</h2>
-        <p class="muted">HTML5 • CSS3 • Flexbox/Grid • JS (Basics)</p>
+          <div class="hero__buttons">
+            <a class="btn" href="projects.html">Переглянути проєкти</a>
+            <a class="btn btn--ghost" href="about.html">Дізнатись більше</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__num">4</div>
+              <div class="stat__label">Сторінки</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">3+</div>
+              <div class="stat__label">Проєкти</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">100%</div>
+              <div class="stat__label">Адаптивність</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card">
+          <figure class="profile-card">
+            <img class="profile-card__img" src="img/avatar.jpg" alt="Фото/аватар Владислава" />
+            <figcaption class="profile-card__caption">
+              <strong>Vlad Prokopchenko</strong><br />
+              <span class="muted">Student • Web (HTML/CSS/JS)</span>
+            </figcaption>
+          </figure>
+
+          <div class="info-box">
+            <h2 class="h3">Швидкі посилання</h2>
+            <ul class="list">
+              <li><a href="about.html">Біографія та навички</a></li>
+              <li><a href="projects.html">Портфоліо</a></li>
+              <li><a href="contact.html">Написати мені</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="card pad col-4">
-        <h2 class="section-title">Фокус</h2>
-        <p class="muted">Адаптивний дизайн, охайна верстка, доступність</p>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="h2">Що є на сайті</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3 class="h3">Про себе</h3>
+            <p>Освіта, навички, хобі та короткі факти.</p>
+            <a class="card__link" href="about.html">Перейти →</a>
+          </article>
+
+          <article class="card">
+            <h3 class="h3">Проєкти</h3>
+            <p>Опис 3–5 робіт з картинками, технологіями та посиланнями.</p>
+            <a class="card__link" href="projects.html">Перейти →</a>
+          </article>
+
+          <article class="card">
+            <h3 class="h3">Контакти</h3>
+            <p>Форма з валідацією + карта через iframe + соцмережі.</p>
+            <a class="card__link" href="contact.html">Перейти →</a>
+          </article>
+        </div>
       </div>
-      <div class="card pad col-4">
-        <h2 class="section-title">Мета</h2>
-        <p class="muted">Зібрати портфоліо для навчання та стажувань</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card avatar" aria-label="Фото або аватар">
-    <img src="img/avatar.svg" alt="Аватар (плейсхолдер)" />
-  </div>
-</section>
-
-<section class="grid" aria-label="Швидкі посилання">
-  <div class="card pad col-6">
-    <h2 class="section-title">Останній проєкт</h2>
-    <p class="muted">
-      Невеликий лендинг для уявної кав’ярні з адаптивною версткою та секцією відгуків.
-    </p>
-    <div class="tags">
-      <span class="tag">HTML</span><span class="tag">CSS Grid</span><span class="tag">Responsive</span>
-    </div>
-    <div style="margin-top:12px">
-      <a class="btn small" href="projects.html#p1">Детальніше</a>
-    </div>
-  </div>
-
-  <div class="card pad col-6">
-    <h2 class="section-title">Що є на сайті</h2>
-    <ul class="muted" style="margin:0; padding-left:18px">
-      <li>Сторінка «Про себе» з таблицею навичок</li>
-      <li>Портфоліо з 5 прикладами проєктів</li>
-      <li>Контакти з формою та мапою (iframe)</li>
-      <li>Темна/світла тема + збереження вибору</li>
-    </ul>
-  </div>
-</section>
-
-    </div>
+    </section>
   </main>
 
-  <footer>
-    <div class="container">
-      © <span id="year">2025</span> • Навчальний проєкт (Лабораторна робота №1)
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year"></span> Vlad Prokopchenko. Всі права захищені.</p>
+      <p class="muted">Зроблено для Лабораторної роботи №1 (HTML).</p>
     </div>
   </footer>
-
-  <script>
-    // Set year without extra JS file dependency
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
